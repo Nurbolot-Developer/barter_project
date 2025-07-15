@@ -1,0 +1,53 @@
+/* Центрируем по вертикали и горизонтали */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% высоты экрана */
+    background-color: #f3f4f6;
+}
+
+/* Форма и заголовок */
+.form-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Оформление формы */
+.form-styled {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.form-styled p {
+    margin-bottom: 15px;
+}
+
+.form-styled input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}

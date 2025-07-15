@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Удалить: {{ ad.title }}</title>
+    <link rel="stylesheet" href="{% static 'ads/delete_ad.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Вы уверены, что хотите удалить "{{ ad.title }}"?</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Да, удалить</button>
+            <a href="{% url 'ads:ad_detail' ad.id %}">отмена</a>
+        </form>
+    </div>
+</body>
+</html>

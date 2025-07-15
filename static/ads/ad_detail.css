@@ -1,0 +1,110 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.ad-detail-wrapper {
+    display: flex;
+    align-items: center; /* Центрируем по вертикали */
+    gap: 30px;
+    flex-wrap: nowrap; /* запрещаем перенос */
+}
+
+.ad-image-container {
+    flex-shrink: 0;
+    width: 200px; /* фиксированная ширина для изображения */
+
+    display: flex;
+    justify-content: center; /* горизонтально центрируем картинку */
+    align-items: center;     /* вертикально центрируем картинку */
+    height: 200px;           /* фиксируем высоту контейнера для вертикального центрирования */
+}
+
+.ad-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;    /* чтобы кнопки могли переноситься на маленьких экранах */
+    gap: 10px;          /* отступы между кнопками */
+    margin-top: 20px;   /* отступ сверху */
+    margin-bottom: 20px;
+    justify-content: center; 
+}
+
+.btn {
+    padding: 12px 20px;
+    background: linear-gradient(145deg, #e0e0e0, #f9f9f9);
+    color: #333;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(200, 200, 200, 0.8), inset 0 1px 0 #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    box-shadow: 0 6px 12px rgba(180, 180, 180, 0.9), inset 0 1px 0 #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background: linear-gradient(145deg, #d9d9d9, #eaeaea);
+    box-shadow: 0 3px 6px rgba(160, 160, 160, 0.8), inset 0 1px 0 #dcdcdc;
+    transform: translateY(0);
+    border-color: #bbb;
+}
+
+
+@media (max-width: 768px) {
+    .ad-detail-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ad-details-text {
+        width: 100%;
+    }
+
+    .ad-image-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .ad-image {
+        max-height: none;
+    }
+}

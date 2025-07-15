@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Предложить обмен для: {{ ad.title }}</title>
+    <link rel="stylesheet" href="{% static 'ads/exchange_proposal.css' %}">
+</head>
+<body>
+
+<h2>Предложить обмен для: {{ ad.title }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Отправить предложение</button>
+</form>
+
+</body>
+</html>

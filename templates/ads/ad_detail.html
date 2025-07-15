@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ ad.title }}</title>
+    <link rel="stylesheet" href="{% static 'ads/ad_detail.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="ad-detail-wrapper">
+            {% if ad.image_url %}
+            <div class="ad-image-container">
+                <img class="ad-image" src="{{ ad.image_url }}" alt="Изображение">
+            </div>
+            {% endif %}
+            <div class="ad-details-text">
+                <h2 class="title">{{ ad.title }}</h2>
+                <p><strong>Описание:</strong> {{ ad.description }}</p>
+                <p><strong>Цена:</strong> {{ ad.price }} рубль</p>
+                <p><strong>Автор:</strong> {{ ad.user.username }}</p>
+                <p><strong>Опубликовано:</strong> {{ ad.created_at }}</p>
+            </div>
+        </div>
+
+        <div class="button-group">
+            {% if user.is_authenticated and ad.user != user %}
+            <a class="btn" href="{% url 'propose_exchange' ad.id %}">Предложить обмен</a>
+            {% endif %}
+
+            {% if request.user == ad.user %}
+            <a class="btn" href="{% url 'ads:create_exchange_proposal' ad.id %}">Предложить обмен</a>
+            <a class="btn btn-edit" href="{% url 'ads:edit_ad' ad.id %}">Редактировать</a>
+            <a class="btn btn-delete" href="{% url 'ads:delete_ad' ad.id %}">Удалить</a>
+            {% endif %}
+
+            <a class="btn btn-back" href="{% url 'ads:ad_list' %}">Назад к объявлениям</a>
+        </div>
+    </div>
+</body>
+
+</html>

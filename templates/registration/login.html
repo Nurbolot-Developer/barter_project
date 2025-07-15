@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="{% static 'ads/login.css' %}">
+</head>
+<body>
+<div class="centered-container">
+        <div class="form-box">
+            <h2>Вход</h2>
+            <form method="post" class="form-styled">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="submit-btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

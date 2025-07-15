@@ -1,0 +1,36 @@
+.form-styled {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-styled p {
+    margin-bottom: 15px;
+}
+
+.form-styled input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1e7e34;
+}

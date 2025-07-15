@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    padding: 0 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.add-button {
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.add-button a {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-button a:hover {
+    background-color: #1e7e34;
+}
+
+.ads-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.ad-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ad-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ad-card h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.ad-card h2 a {
+    text-decoration: none;
+}
+
+.ad-card h2 a:hover {
+    text-decoration: underline;
+}
+
+.ad-card p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.pagination a {
+    color: #007bff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.pagination a:hover {
+    color: #0056b3;
+}
+
+.pagination span {
+    color: #555;
+}
+
+/* Контейнер для ссылок Войти и Зарегистрироваться */
+.auth-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+}
+
+/* Общий стиль для кнопок */
+.auth-links a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Кнопка Войти */
+.auth-links a.login-btn {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.auth-links a.login-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: white;
+}
+
+/* Кнопка Зарегистрироваться */
+.auth-links a.register-btn {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #28a745;
+}
+
+.auth-links a.register-btn:hover {
+    background-color: #19692c;
+    border-color: #19692c;
+    color: white;
+}
+
+/* Имя пользователя */
+.auth-links .username {
+    font-weight: 600;
+    color: #333;
+     background-color: #eaeaea;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/* Кнопка выхода */
+.logout-btn {
+    background-color: white;
+    color: #333;
+    border: 1px solid black;
+}
+
+.logout-btn:hover {
+    background-color: silver;
+}
+
+.ads-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* две колонки */
+    gap: 20px;
+}
+
+.ad-card {
+    display: flex;
+    gap: 15px; /* отступ между изображением и текстом */
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ad-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ad-image {
+    width: 150px; /* фиксированная ширина картинки */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0; /* чтобы картинка не сжималась */
+}
+
+.ad-content {
+    flex: 1; /* чтобы текст занимал оставшееся пространство */
+}
+
+.ad-card h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.ad-card h2 a {
+    text-decoration: none;
+}
+
+.ad-card h2 a:hover {
+    text-decoration: underline;
+}
+
+.ad-card p {
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Универсальный серебристый стиль для кнопок */
+.silver-button {
+    background-color: #c0c0c0; /* ярко-серебристый */
+    color: #000;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px; /* отступ сверху */
+}
+
+.silver-button:hover {
+    background-color: #a9a9a9; /* тёмно-серебристый при наведении */
+    color: white;
+}
+
+/* Выравнивание кнопок в один ряд */
+.button-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* если мало места, перенос на новую строку */
+    margin-top: 15px; /* отступ сверху */
+}

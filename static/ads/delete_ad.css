@@ -1,0 +1,62 @@
+/* ads/style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 480px;
+    background: #fff;
+    margin: 60px auto;
+    padding: 30px 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #d9534f; /* красный для предупреждения */
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+button:hover {
+    background-color: #c9302c;
+}
+
+a {
+    text-decoration: none;
+    color: #5bc0de;
+    font-size: 1rem;
+    align-self: center;
+    padding: 12px 20px;
+    border: 2px solid #5bc0de;
+    border-radius: 5px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+a:hover {
+    background-color: #5bc0de;
+    color: white;
+}

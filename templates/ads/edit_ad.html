@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать: {{ ad.title }}</title>
+    <link rel="stylesheet" href="{% static 'ads/edit_ad.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Редактировать объявление</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Сохранить</button>
+        </form>
+        <a href="{% url 'ads:ad_detail' ad.id %}">← Назад</a>
+    </div>
+</body>
+</html>
